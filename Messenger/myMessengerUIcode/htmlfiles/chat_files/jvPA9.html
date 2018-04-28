@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+    <title>Table fixed header (Simple) - Bootsnipp.com</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="jvPA9_data/bootstrap.css" rel="stylesheet" id="bootstrap-css">
+    <style type="text/css">
+    .table-fixheader {
+    position: relative;
+    padding-top: 40px;
+}
+.table-fixheader>div {
+    height:150px;
+    overflow-y:auto;
+}
+.table-fixheader thead{
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+.table-fixheader thead tr{
+    position: absolute;
+    width: 100%;
+}
+.table-fixheader thead tr th{
+    display:inline-block;
+}
+    </style>
+    <script src="jvPA9_data/jquery-1.js"></script><style></style>
+    <script src="jvPA9_data/bootstrap.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+		    <div class="table-fixheader">
+		        <div>
+        		    <table class="table table-striped">
+        		        <thead>
+        		            <tr> <th class="col-md-2">#</th> <th class="col-md-3">First Name</th> <th class="col-md-3">Last Name</th> <th class="col-md-4">Username</th> </tr>
+        		        </thead>
+        		        <tbody>
+        		            <tr> <th class="col-md-2">1</th> <td class="col-md-3">Mark</td>  <td class="col-md-3">Otto</td>     <td class="col-md-4">@mdo</td> </tr>
+        		            <tr> <th class="col-md-2">2</th> <td class="col-md-3">Jacob</td> <td class="col-md-3">Thornton</td> <td class="col-md-4">@fat</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		            <tr> <th class="col-md-2">3</th> <td class="col-md-3">Larry</td> <td class="col-md-3">the Bird</td> <td class="col-md-4">@twitter</td> </tr>
+        		        </tbody>
+        		      </table>
+        		  </div>
+        	    </div>
+        	</div>
+	</div>
+</div>
+	<script type="text/javascript">
+	
+	</script>
+
+
+</body></html>

@@ -1,0 +1,139 @@
+
+<script src="../jsfiles/angular.min.js"></script>
+
+<head> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../cssfiles/bootstrap.min.css">
+  <link rel="stylesheet" href="../cssfiles/user_profile.css">
+  <script src="../jsfiles/jquery.min.js"></script>
+  <script src="../jsfiles/bootstrap.min.js"></script>
+  <script src="../jsfiles/angular.js"></script>
+  <script src="../jsfiles/angular-animate.js"></script>
+  <script src="../jsfiles/angular-sanitize.js"></script>
+  <script src="../jsfiles/ui-bootstrap-tpls-2.5.0.js"></script>
+  <script src="../jsfiles/user_profile.js"></script>
+</head>
+
+<body style="background-color:rgb(227, 250, 252)">
+
+	<div class="raw" ng-app="myApp" ng-controller="myCtrl" style="margin-top:50px">
+
+		<div class="col-sm-4">
+				<div class="contlists">
+					<div class="panel-body table-responsive">
+						<table class="table table-bordered">
+							<thead>
+									<tr>
+											<th>Select</th>
+											<th>Contact Name</th>
+											<th>buttons</th>	
+									</tr>
+							</thead>
+							<tbody ng-repeat="x in continfo.cont_list">
+								<tr>
+									<td> </td>
+									<td>
+										<button type="button" class="btn btn-link" ng-click="show_contact_info(x)">
+												{{x}}
+										</button>
+									</td>
+									<td>
+										<button type="button" class="btn btn-success" ng-click="show_view(x,"")">
+											message
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+				<div class="grplists">
+					<div class="panel-body table-responsive">
+						<table class="table table-bordered">
+							<thead>
+									<tr>
+											<th>Select</th>
+											<th>Group Name</th>
+											<th>buttons</th>	
+									</tr>
+							</thead>
+							<tbody ng-repeat="x in continfo.group_list">
+								<tr>
+									<td></td>
+									<td>
+										<button type="button" class="btn btn-link" ng-click="show_group_info(x)">
+												{{x}}
+										</button>
+									</td>
+									<td>
+										<button type="button" class="btn btn-success" ng-click="show_view("",x)">
+											message
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+		</div>
+
+		<div class="col-sm-4">
+			<div class="chats">
+				<div class="panel-body table-responsive">
+					<table class="table table-bordered">
+						<thead>
+								<tr>
+										<th>Chat Page ViewS</th>	
+								</tr>
+						</thead>
+						<tbody ng-repeat="x in currviewinfo.msgs">
+							<tr>
+								<td>
+									<button type="button" ng-click="get_msg_by_id(x)" data-toggle="dropdown" class="btn btn-md btn-link dropdown-toggle">    
+											{{x}} <span class="caret"></span>
+									</button>
+									<ul class="dropdown-menu" > 
+										<li>{{msg.sender}}</li>
+										<li>{{msg.msg_value}}</li>
+										<li> 
+											<button type="button" class="btn btn-danger" ng-click="delete_msg(x)"> DELETE MSG </button> 
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		    <form>
+				<div class="form-group">
+					<textarea class="form-control" rows="3" id="comment" placeholder="Type Your Message Here" ng-model="msgarea"></textarea>
+				</div>
+				<button type="button" ng-click="create_msg()" class="btn btn-block btn-success ">    
+						SEND 
+				</button>
+			</form>		
+		</div>
+
+
+		<div class="col-sm-4">
+
+				<img src="../imgfiles/default.jpg" class="img-circle center-block" alt="Cinque Terre" width="300" height="235">
+	
+				<h3 align="center"> <b>{{userinfo.user_name}}</b> </h3>
+				<br>
+				<h3 align="center"> <b>{{userinfo.email}}</b> </h3>
+				<br>
+				<h3 align="center"> <b>{{userinfo.user_status}}</b> </h3>
+				<br>
+				<button type="button" ng-click="logout()" class="btn btn-block btn-danger ">    
+					Logout
+				</button>
+	
+		</div>
+	</div>
+
+</body>
+

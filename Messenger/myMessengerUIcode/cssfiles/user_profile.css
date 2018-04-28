@@ -1,0 +1,29 @@
+.table-responsive {
+    max-height:300px;
+}
+
+.chats {
+    width : 427px;
+    height : 450px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+    padding : 60px 80px;
+    margin-bottom: 10px;
+}
+
+.contlists {
+    width : 430px;
+    height : 300px;
+    box-sizing: border-box;
+    background-color: rgb(200, 97, 231);
+    margin-bottom: 10px;
+}
+
+.grplists {
+    width : 430px;
+    height : 300px;
+    box-sizing: border-box;
+    background-color: rgb(126, 175, 218);
+    margin-bottom: 10px;
+}

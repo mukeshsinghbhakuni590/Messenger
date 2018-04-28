@@ -1,0 +1,40 @@
+
+<script src="jsfiles/angular.min.js"></script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="cssfiles/bootstrap.min.css">
+  <script src="jsfiles/jquery.min.js"></script>
+  <script src="jsfiles/bootstrap.min.js"></script>
+  <script src="jsfiles/angular.js"></script>
+  <script src="jsfiles/angular-animate.js"></script>
+  <script src="jsfiles/angular-sanitize.js"></script>
+  <script src="jsfiles/ui-bootstrap-tpls-2.5.0.js"></script>
+  <script src="jsfiles/messenger_service.js"></script>
+</head>
+
+<body background ="imgfiles/default.jpg">
+
+  <div ng-app="myApp" ng-controller="myCtrl" style="margin-left:10%;margin-right:10%;margin-top:50px;width:80%;background-color:rgb(243, 243, 243)" >
+    <div class="form-group">
+		  <label for="usr">Name:</label>
+		  <input type="text" class="form-control" id="usr" ng-model="name">
+    </div>
+    <div class="form-group">
+		  <label for="usr">Email:</label>
+		  <input type="email" class="form-control" id="email" ng-model="email">
+	  </div>
+    <div class="form-group">
+		  <label for="pwd">Password:</label>
+		  <input type="password" class="form-control" id="pwd" ng-model="pwd">
+	  </div>
+    <button type="button" ng-click="create_user()" class="btn btn-block btn-primary	">
+        Create User
+    </button>
+    <button type="button" ng-click="login_link()" class="btn btn-block btn-primary	">
+        For LogIn Click Here
+    </button>
+  </div>
+</body>
+</html>
